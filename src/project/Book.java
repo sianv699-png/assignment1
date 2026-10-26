@@ -1,0 +1,19 @@
+package project;
+
+public class Book extends Product {
+    private String author;
+
+    public Book(int id, String name, double price, int stockQuantity, String author) {
+        super(id, name, price, stockQuantity);
+        this.author = author;
+    }
+
+    public String getAuthor() { return author; }
+    public void setAuthor(String author) { this.author = author; }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("[Book] [" + getId() + "] " + getName() + " by " + author
+                + " | price: " + getPrice() + " | stock: " + getStockQuantity());
+    }
+}
